@@ -378,6 +378,23 @@ $graphs{innodb_insert_buf} = {
 
 #---------------------------------------------------------------------
 
+$graphs{innodb_adaptive_hash} = {
+    config => {
+	global_attrs => {
+	    title  => 'InnoDB Adaptive Hash Optimiser',
+	},
+	data_source_attrs => {
+	    draw => 'LINE1',
+	},
+    },
+    data_sources => [
+	{name => 'Innodb_adaptive_hash_hash_searches',    label => 'Hash Searches'},
+	{name => 'Innodb_adaptive_hash_nonhash_searches', label => 'Nonhash Searches'},
+    ],
+};
+
+#---------------------------------------------------------------------
+
 $graphs{innodb_io} = {
     config => {
 	global_attrs => {
