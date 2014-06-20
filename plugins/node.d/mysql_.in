@@ -780,7 +780,7 @@ $graphs{innodb_adaptive_hash} = {
     },
     data_sources => [
 	{name => 'Innodb_adaptive_hash_hash_searches',    label => 'Hash Searches'},
-	{name => 'Innodb_adaptive_hash_nonhash_searches', label => 'Nonhash Searches'},
+	{name => 'Innodb_adaptive_hash_non_hash_searches', label => 'Nonhash Searches'},
     ],
 };
 
