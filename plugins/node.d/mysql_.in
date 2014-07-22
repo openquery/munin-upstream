@@ -1341,7 +1341,8 @@ sub update_variables {
                                          + $data->{'innodb_buffer_pool_size'}
                                          + ( $data->{'innodb_additional_mem_pool_size'} || 0 )
                                          + $data->{'innodb_log_buffer_size'}
-                                         + ( $data->{'tokudb_cache_size'} || 0 );
+                                         + ( $data->{'tokudb_cache_size'} || 0 )
+                                         + ( $data->{'slave_parallel_threads'} || 0) * ( $data->{'slave_parallel_max_queued'} || 0);
 
     my $tmp_table_size = $data->{'tmp_table_size'};
     my $max_heap_table_size = $data->{'max_heap_table_size'};
