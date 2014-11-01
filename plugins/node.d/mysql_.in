@@ -1,4 +1,4 @@
-#!@@PERL@@
+#!/usr/bin/perl
 # -*- perl -*-
 
 =encoding utf8
@@ -1583,7 +1583,7 @@ sub config {
     if ($graph_name =~ /wsrep_/) {
       print "graph_category galera\n";
     } else {
-      print "graph_category mysql\n";
+      print "graph_category mysql2\n";
     }
 
     my $i = 0;
